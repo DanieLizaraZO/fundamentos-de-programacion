@@ -4,8 +4,6 @@
 
 num = int(input("Ingrese un número entre 1 y 4 cifras: "))
 
-numString = len(str(num))
-
 if num>=10000 or num<0:
     print("El número debe ser positivo y no puede ser mayor de cuatro cifras")
 elif num >= 1 and num<10:
