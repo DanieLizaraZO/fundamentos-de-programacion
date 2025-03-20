@@ -21,14 +21,14 @@ nombresEstudiantes = []
 notasEstudiantes = []
 for i in range(numEstudiantes):
     estudiante = input("Ingrese el nombre del estudiante: ")
-    nota = input("Ingrese la nota del estudiante: ")
+    nota = int(input("Ingrese la nota del estudiante: "))
     nombresEstudiantes.append(estudiante)
     notasEstudiantes.append(nota)
 
 paralela =  list(zip(notasEstudiantes,nombresEstudiantes))
 
 ordenado = []
-
+print(paralela)
 for i in range(len(paralela)):
     maximo = max(paralela)
     ordenado.append(maximo)
