@@ -28,7 +28,7 @@ for i in range(numEstudiantes):
 paralela =  list(zip(notasEstudiantes,nombresEstudiantes))
 
 ordenado = []
-print(paralela)
+
 for i in range(len(paralela)):
     maximo = max(paralela)
     ordenado.append(maximo)
@@ -39,3 +39,23 @@ print(ordenado)
 print(f"El estudiante con la nota mas alta fue {ordenado[0]}")
 print(f"El estudiante con la nota más baja fue {ordenado[-1]}")
 
+suma = 0
+
+for i in ordenado:
+    suma += i[0]
+
+promedio = suma/len(ordenado)
+
+print(promedio)
+
+encimaPromedio = []
+debajoPromedio = []
+
+for i in range(len(ordenado)):
+    if ordenado[i][0] >= promedio:
+        encimaPromedio.append(ordenado[i])
+    else:
+        debajoPromedio.append(ordenado[i])
+
+print(f"Los estudiantes por encima del promedio son {encimaPromedio}")
+print(f"Los estudiantes por debajo del promedio son {debajoPromedio}")
